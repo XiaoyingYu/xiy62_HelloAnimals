@@ -7,7 +7,7 @@ public class Animal {
 	private int weight;
 	private int miniWeight;
 
-	public Animal(String age, String color, String type, int weight, int miniWeight){
+	protected Animal(String age, String color, String type, int weight, int miniWeight){
 		this.age=age;
 		this.color=color;
 		this.type=type;
@@ -15,10 +15,10 @@ public class Animal {
 		this.miniWeight=miniWeight;
 	}
 
-	public int eat(){
+	int eat(){
 		return weight+1;
 	}
-	public void output(){
+	void output(){
 		if(weight>miniWeight){
 			System.out.println("The weight of "+type+ " is: "+weight+"\n"+ "It is larger than a miniWeight:"+miniWeight);
 		}
